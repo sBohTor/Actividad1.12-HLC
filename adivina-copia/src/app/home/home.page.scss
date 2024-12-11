@@ -1,0 +1,23 @@
+ion-card {
+  transition: transform 0.3s;
+}
+
+ion-card:hover {
+  transform: scale(1.05);
+}
+
+@media (orientation: portrait) {
+  ion-avatar img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (orientation: landscape) {
+  ion-avatar img {
+    border-radius: 10%;
+    width: 80px;
+    height: 80px;
+  }
+}

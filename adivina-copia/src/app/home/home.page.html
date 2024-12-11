@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Catálogo de Comida</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Barra de búsqueda -->
+  <ion-searchbar [(ngModel)]="filtro" placeholder="Buscar..."></ion-searchbar>
+
+  <!-- Grid de tarjetas para mostrar los productos -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="6" size-lg="4" *ngFor="let product of filteredProducts">
+        <ion-card>
+          <img [src]="product.image" alt="Imagen del producto" />
+          <ion-card-header>
+            <ion-card-title>{{ product.name }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p><strong>Descripción:</strong> {{ product.description }}</p>
+            <p><strong>Precio:</strong> ${{ product.price }}</p>
+            <p><strong>Categoría:</strong> {{ product.category }}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
