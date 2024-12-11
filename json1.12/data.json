@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Pizza Margarita",
+    "description": "Pizza con tomate, mozzarella y albahaca fresca.",
+    "price": 8.99,
+    "category": "Pizzas",
+    "image": "https://twicpics.moulinex.es/https://sebplatform.api.groupe-seb.com/statics/a24b6f39-ae71-4b11-97f0-f8ffd819eab4.jpg?w=1920&fit=scale"
+  },
+  {
+    "id": 2,
+    "name": "Hamburguesa Clásica",
+    "description": "Hamburguesa con carne, lechuga, tomate y cebolla.",
+    "price": 6.50,
+    "category": "Hamburguesas",
+    "image": "https://www.atodamesa.es/wp-content/uploads/2024/11/ATM-CARTA-ENE-24-CUADRADO-05-scaled-1-scaled-1.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Ensalada César",
+    "description": "Ensalada con pollo, lechuga, queso parmesano y aderezo César.",
+    "price": 5.99,
+    "category": "Ensaladas",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4fC4yroq6DUZrmG3vD_Bbg6XTMaiJXBTXjA&s"
+  },
+  {
+    "id": 4,
+    "name": "Soda Cola",
+    "description": "Refresco cola en lata de 500ml.",
+    "price": 1.99,
+    "category": "Bebidas",
+    "image": "https://images.albertsons-media.com/is/image/ABS/208010038-A1C1?$ng-ecom-pdp-mobile$&defaultImage=Not_Available"
+  },
+  {
+    "id": 5,
+    "name": "Tacos",
+    "description": "Tacos de carne asada con cebolla, cilantro y salsa.",
+    "price": 3.99,
+    "category": "Tacos",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeda_ZUOy4fuT3OBzwnfI1z4TFfQV_5I4lZA&s"
+  }
+]
