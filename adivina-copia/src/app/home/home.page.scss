@@ -1,23 +1,95 @@
-ion-card {
-  transition: transform 0.3s;
+/* Estilos generales */
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #f0f0f0;
 }
 
-ion-card:hover {
-  transform: scale(1.05);
+/* Uso de Flexbox para crear un layout flexible */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-@media (orientation: portrait) {
-  ion-avatar img {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
+/* Uso de Grid para layout responsivo */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+/* Estilos para pantallas grandes (desktops) */
+@media screen and (min-width: 1024px) {
+  body {
+      background-color: #f0f0f0;
   }
 }
 
-@media (orientation: landscape) {
-  ion-avatar img {
-    border-radius: 10%;
-    width: 80px;
-    height: 80px;
+/* Estilos para tablets (pantallas medianas) */
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  body {
+      background-color: #e0e0e0;
   }
+}
+
+/* Estilos para móviles (pantallas pequeñas) */
+@media screen and (max-width: 599px) {
+  body {
+      background-color: #d0d0d0;
+  }
+  
+  /* Ajuste de fuente para pantallas pequeñas */
+  body {
+      font-size: 14px;
+  }
+
+  /* Menú hamburguesa */
+  .hamburger {
+      display: block;
+      font-size: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+  }
+
+  .nav-menu {
+      display: none;
+  }
+
+  .nav-menu.active {
+      display: block;
+  }
+}
+
+/* Transición suave cuando el tamaño de pantalla cambia */
+@media screen and (max-width: 599px) {
+  .menu {
+      transition: transform 0.5s ease-in-out;
+      transform: translateY(0);
+  }
+}
+
+/* Animación de fade in */
+@media screen and (min-width: 600px) {
+  .menu {
+      animation: fadeIn 1s ease-in-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Estilos para el mensaje de error */
+.error-message {
+  color: red;
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 10px;
 }

@@ -9,16 +9,21 @@ import { HttpClient } from '@angular/common/http';
 export class HomePage {
   products: any[] = [];
   filtro: string = '';
+  selectedSortOption: string = 'price';
+  loading: boolean = true;
+  errorMessage: string = '';
 
   constructor(private httpClient: HttpClient) {
     this.httpClient
-      .get<any[]>('https://raw.githubusercontent.com/sBohTor/Actividad1.12/master/json1.12/data.json') 
+      .get<any[]>('https://raw.githubusercontent.com/sBohTor/Actividad1.12/master/json1.12/data.json')
       .subscribe(
         (response) => {
           this.products = response;
+          this.loading = false;
         },
         (error) => {
-          console.error('Error al obtener los productos:', error);
+          this.errorMessage = 'Error al cargar los productos. Inténtalo de nuevo.';
+          this.loading = false;
         }
       );
   }
@@ -31,5 +36,16 @@ export class HomePage {
       item.name.toLowerCase().includes(this.filtro.toLowerCase()) ||
       item.category.toLowerCase().includes(this.filtro.toLowerCase())
     );
+  }
+
+  get sortedProducts() {
+    return this.filteredProducts.sort((a, b) => {
+      if (this.selectedSortOption === 'price') {
+        return a.price - b.price;
+      } else if (this.selectedSortOption === 'name') {
+        return a.name.localeCompare(b.name);
+      }
+      return 0;
+    });
   }
 }
